@@ -66,4 +66,4 @@ I first encountered "HaskaSu" through his [YouTube channel](https://www.youtube.
 
 For novice game programmers, the content of this book can significantly reduce the learning curve in your future development journey. The clear explanations provided within help readers enhance their development skills. Even seasoned game developers can benefit from uncovering problem-solving techniques they may have overlooked in the past.
 
-In the following sections, I will provide excerpts from some chapters, along with the results of implementing them in Python and any details I discover along the way.
+In the following sections, I will provide excerpts from some chapters, along with the results of implementing them and any details I discover along the way.
