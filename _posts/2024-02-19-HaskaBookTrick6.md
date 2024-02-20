@@ -173,7 +173,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 最後就是用 Mix 做 Tween 的效果 Mix 做的行為其實就是就是內插。
 ![內插](:HaskaBook/1D_linear_interpolation.jpg)
 
-$ \( p = p_1 \cdot (1 - t) + p_2 \cdot t \) $
+$$ P = P_{1} \cdot (1 - t) + P_{2} \cdot t $$
 
 vec3 的內插就是(x, y, z)每個位置的數各自做內插。
 
@@ -184,5 +184,5 @@ RGB 就直接內插即可 HSV 要先從 RGB 轉為 HSV 後內插 內插完的值
 ![成果](:HaskaBook/Trick6.gif)
 
 可以看到左邊的 RGB 做漸變效果時 中間有一度整體的色彩會掉下去 變成一種深褐色；
-而 HSV 的變化就是一直維持著高亮度的顏色；
+而 HSV 的變化就是一直維持著高亮度的顏色，但有一度會變得不像紅也不像綠的顏色；
 至於哪種效果會比較好就得問問 Team 上的美術了，哪種比較好其實是種主觀的評論，哪種比較適合要看產品的風格。
