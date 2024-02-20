@@ -9,7 +9,7 @@ author:
 # multiple category is not supported
 category: ゲームデザインXアルゴリズム
 # multiple tag entries are possible
-tags: [GameDesign, Python, BookReport]
+tags: [GameDesign, BookReport]
 # thumbnail image for post
 img: ":HaskaBook/HaskaBook.jpg"
 # disable comments on this page
@@ -50,7 +50,7 @@ date: 2023-11-21 17:44:23 +0800
 
 **作者：** 小哈片刻(HaskaSu)
 
-**出版日期：** 2023 年 8 月
+**発行日：** 2023 年 8 月
 
 ## 作者紹介
 
@@ -66,4 +66,4 @@ date: 2023-11-21 17:44:23 +0800
 
 對初心者のゲームプログラマーにとって、この本の内容は将来の開発の旅路で学ぶべきことを大幅に減らすことができます。提供される明確な説明は、読者が開発スキルを向上させるのに役立ちます。経験豊富なゲーム開発者でも、過去に見逃していた問題解決の技術を発見するのに役立つでしょう。
 
-次のセクションでは、いくつかの章から抜粋し、それをPythonで実装した結果と、途中で発見した詳細を提供します。
+次のセクションでは、いくつかの章から抜粋し、実装した結果と、途中で発見した詳細を提供します。

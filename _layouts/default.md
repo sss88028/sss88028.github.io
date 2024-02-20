@@ -35,6 +35,7 @@ layout: util/compress
   <body {{ default_dark }}>
     {% if color_scheme_enabled -%}
       <script src="{{ site.baseurl }}/assets/js/color-scheme-attr-init.js" data-mode="{{ site.data.conf.main.color_scheme_default_dark }}"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     {%- endif %}
     {% include default/nav/navigation-top-nav.html -%}
     {% include default/nav/navigation-side-nav.html -%}
