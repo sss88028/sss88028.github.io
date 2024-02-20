@@ -69,7 +69,7 @@ P.S.在[書中]({% post_url 2023-11-21-HaskaBookReport %})是稱呼HSB，用Brig
 
 用HSV最大的理由就是很多色彩學技巧是依據HSV的色彩空間，像是互補色、三分色、補色分割、相似色等。
 
-![色彩學](:HaskaBook/HSBDergree.jpeg)
+![色彩學](:HaskaBook/HSBDergree.png)
 
 ## 實作
 
