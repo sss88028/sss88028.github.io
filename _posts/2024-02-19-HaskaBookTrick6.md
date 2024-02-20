@@ -9,7 +9,7 @@ author:
 # multiple category is not supported
 category: 遊戲設計X演算法
 # multiple tag entries are possible
-tags: [GameDesign, Python, BookReport]
+tags: [GameDesign, BookReport, GLSL]
 # thumbnail image for post
 img: ":HaskaBook/Trick6.gif"
 # disable comments on this page

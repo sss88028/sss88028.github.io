@@ -9,7 +9,7 @@ author:
 # multiple category is not supported
 category: GameDesign X Algorithm
 # multiple tag entries are possible
-tags: [GameDesign, Python, BookReport]
+tags: [GameDesign, BookReport]
 # thumbnail image for post
 img: ":HaskaBook/HaskaBook.jpg"
 # disable comments on this page
