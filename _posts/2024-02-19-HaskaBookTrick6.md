@@ -141,3 +141,10 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     uv.x -= .75;
 ```
 首先先將座標調整至想要的位置
+
+```
+    float yStep = step(0., uv.y);
+    vec3 color = vec3(uv, 0.);
+    color = mix(black, white, yStep);
+```
+把顏色分為上白下黑主要是想比較當背景顏色不同時在做顏色漸變時對視覺造成的差異。
