@@ -16,7 +16,7 @@ img: ":HaskaBook/Trick6.gif"
 #comments_disable: true
 
 # publish date
-date: 2024-02-19 22:00:00 +0800
+date: 2024-02-20 22:00:00 +0800
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2022-02-10 08:11:06 +0900
