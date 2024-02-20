@@ -48,9 +48,9 @@ I recently came across a fantastic book. After reading it, I plan to implement s
 
 # [遊戲設計 X 演算法 X TypeScript](https://www.books.com.tw/products/0010965698?sloc=main){:target="\_blank"}
 
-**作者：** 小哈片刻(HaskaSu)
+**Author：** 小哈片刻(HaskaSu)
 
-**出版日期：** 2023 / 8
+**Publication date：** 2023 / 8
 
 ## Author's Background
 
