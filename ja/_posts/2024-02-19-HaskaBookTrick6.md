@@ -1,13 +1,13 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: HaskaBookReportTrick6
-title: HaskaSu GameDesign X Algorithm X TypeScript Trick 6
+title: 小哈片刻 ゲームデザインXアルゴリズムXTypeScript Trick 6
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author:
 # multiple category is not supported
-category: GameDesign X Algorithm
+category: ゲームデザインXアルゴリズム
 # multiple tag entries are possible
 tags: [GameDesign, BookReport, GLSL]
 # thumbnail image for post
