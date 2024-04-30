@@ -144,6 +144,15 @@ n ： 數字中 Set 的 Bit 數量。
     }
 ```
 
+## 結論
+
+||Brute Force|Brian Kernighan’s algorithm|
+|時間複雜度|O(log(n))|O(log(n))|
+|空間複雜度|O(1)|O(1)|
+|n|數字中全部的 Bit 數量|數字中 Set 的 Bit 數量|
+
+在常見的 Int32 的資料形式中，這兩種演算法並不會有太明顯的差異；但當處理大型數據集時 Brian Kernighan’s algorithm 的優勢就會顯現出來了。
+
 ## 參考資料
 
 - [Brian Kernighan’s Algorithm: Count set bits in a number](https://yuminlee2.medium.com/brian-kernighans-algorithm-count-set-bits-in-a-number-18ab05edca93){:target="\_blank"}
