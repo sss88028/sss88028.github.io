@@ -44,7 +44,7 @@ Fenwick Tree 解題整理
 
 <!-- outline-end -->
 
-先來看看 2024 7/30 Leetcode 的每日題目 [1395. Count Number of Teams](https://leetcode.com/problems/count-number-of-teams)
+先來看看 2024 7/30 Leetcode 的每日題目 [1395. Count Number of Teams](https://leetcode.com/problems/count-number-of-teams)，這是一道 Medium 的題目。
 
 ## 題目敘述
 
@@ -57,7 +57,7 @@ Fenwick Tree 解題整理
 
 按上述條件返回組建的作戰單位的方案數。
 
-說白了就是找出<strong>嚴格遞增</strong>或<strong>嚴格遞減</strong>的組合數。
+說白了就是找出 3 個數一組<strong>嚴格遞增</strong>或<strong>嚴格遞減</strong>的組合數。
 
 ## 解法
 
@@ -119,3 +119,13 @@ public class Solution
 其中 $$ n $$ 為數組 $$ rating $$ 的長度。
 
 那這道題目跟本文標題的 Fenwick Tree 有何關聯呢?
+
+上面的解法看起來已經十分精煉了，但出題者的解答裡卻有一個更加美妙的方式，而要理解其作法需要先理解[315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/)，這是一道<strong>Hard</strong>的題目，一道 Medium 的題目為何需要先會解一道 Hard 的題目呢?那就先來看看這道 Hard 題目該如何解。
+
+## 題目敘述
+
+給定一個整數數組 <code>nums</code>，返回一個整數數組 <code>counts</code>，其中 <code>counts[i]</code> 是在 <code>nums[i]</code> 右側的較小元素的數量。
+
+## 思考
+
+很簡單吧只要歷遍每個元素及其他之後的元素加到結果裡即可得到解了，但看下 Constraints $$ 1 <= nums.length <= 10^5 $$，很明顯 $$ O(n^2) $$ 的解法必定會超時。因此這裡就要使用上 Fenwick Tree 了
