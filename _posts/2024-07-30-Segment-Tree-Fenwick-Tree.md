@@ -116,7 +116,7 @@ public class Solution
 
 空間複雜度 $$ O(1) $$。
 
-其中 $$ n $$ 為數組 $$ rating $$ 的長度。
+其中 $$ n $$ 為 $$ rating $$ 的長度。
 
 那這道題目跟本文標題的 Fenwick Tree 有何關聯呢?
 
@@ -128,4 +128,34 @@ public class Solution
 
 ## 思考
 
-很簡單吧只要歷遍每個元素及其他之後的元素加到結果裡即可得到解了，但看下 Constraints $$ 1 <= nums.length <= 10^5 $$，很明顯 $$ O(n^2) $$ 的解法必定會超時。因此這裡就要使用上 Fenwick Tree 了
+很簡單吧只要歷遍每個元素及其他之後的元素加到結果裡即可得到解了，但看下 Constraints $$ 1 <= nums.length <= 10^5 $$，很明顯 $$ O(n^2) $$ 的解法必定會超時。因此這裡就要使用上 Fenwick Tree 了。
+
+## Fenwick Tree
+
+其實 Fenwick Tree 最常使用到的情況是<strong>計算陣列中的區間總和</strong>；下面給個例子
+
+```
+Input：arr = [2,5,3,4,1], range [[2, 3], [0, 2]]
+Output：[ 7, 10 ]
+Explanation：arr[2] + arr[3] = 7，arr[0] + arr[1] + arr[2] = 10。
+```
+
+一個常見的解法是先建立一個 Sum Array
+
+```
+arr = [2,5,3,4,1]
+       0  1  2   3   4   5
+sum = [0, 2, 7, 10, 14, 15]
+range [2, 3] = sum[4] - sum[2]
+range [0, 2] = sum[3] - sum[0]
+```
+
+時間複雜度 $$ O(n + m) $$，建立<strong>sum</strong>所需時間為 $$ O(n) $$，每次找區間和為$$ O(1) $$，歷遍$$ range $$所需時間為 $$ O(m) $$。
+
+空間複雜度 $$ O(n) $$。
+
+其中 $$ n $$ 為 $$ arr $$ 的長度，$$ m $$ 為 $$ range $$ 的長度。
+
+這樣看起來也頗快的啊?
+
+但如果<strong>arr</strong>中的元素會一直更新，如[307. Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/description/)，想想每次如果要更新<strong>arr</strong>中特定數量元素，那每次更新的耗時都是 $$ O(n) $$。
