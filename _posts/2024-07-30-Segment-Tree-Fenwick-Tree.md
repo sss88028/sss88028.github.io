@@ -46,7 +46,7 @@ Fenwick Tree 解題整理
 
 先來看看 2024 7/30 Leetcode 的每日題目 [1395. Count Number of Teams](https://leetcode.com/problems/count-number-of-teams)，這是一道 Medium 的題目。
 
-## 題目敘述
+## 題目 1395 敘述
 
 <code>n</code> 名士兵站成一排。每個士兵都有一個獨一無二的評分 <code>rating</code>。
 
@@ -122,7 +122,7 @@ public class Solution
 
 上面的解法看起來已經十分精煉了，但出題者的解答裡卻有一個更加美妙的方式，而要理解其作法需要先理解[315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/)，這是一道<strong>Hard</strong>的題目，一道 Medium 的題目為何需要先會解一道 Hard 的題目呢?那就先來看看這道 Hard 題目該如何解。
 
-## 題目敘述
+## 題目 315 敘述
 
 給定一個整數數組 <code>nums</code>，返回一個整數數組 <code>counts</code>，其中 <code>counts[i]</code> 是在 <code>nums[i]</code> 右側的較小元素的數量。
 
@@ -132,7 +132,7 @@ public class Solution
 
 ## Fenwick Tree
 
-其實 Fenwick Tree 最常使用到的情況是<strong>計算陣列中的區間總和</strong>；下面給個例子
+Fenwick Tree 最常使用到的情況是<strong>計算陣列中的區間總和</strong>；下面給個例子
 
 ```
 Input：arr = [2,5,3,4,1], range [[2, 3], [0, 2]]
@@ -140,10 +140,10 @@ Output：[ 7, 10 ]
 Explanation：arr[2] + arr[3] = 7，arr[0] + arr[1] + arr[2] = 10。
 ```
 
-一個常見的解法是先建立一個 Sum Array
+一個常見的解法是先建立一個 Sum Array，再根據要計算總和的範圍直接得出結果。
 
 ```
-arr = [2,5,3,4,1]
+arr =    [2, 5,  3,  4,  1]
        0  1  2   3   4   5
 sum = [0, 2, 7, 10, 14, 15]
 range [2, 3] = sum[4] - sum[2]
@@ -159,3 +159,28 @@ range [0, 2] = sum[3] - sum[0]
 這樣看起來也頗快的啊?
 
 但如果<strong>arr</strong>中的元素會一直更新，如[307. Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/description/)，想想每次如果要更新<strong>arr</strong>中特定數量元素，那每次更新的耗時都是 $$ O(n) $$。
+
+這時 Fenwick Tree 就可以發揮其作用。
+
+Fenwick Tree 會建立一個長度為<strong>n + 1</strong>的陣列，這邊<strong>+ 1</strong>的目的是方便之後的 bit 操作；看下面的陣列範例這個 Tree 是怎麼建立的呢?
+
+```
+arr  = [   10, -4, 12,  7, 10,  4,  2,  9,  9,  4, 14, 13, 13, -5, 6]
+tree = [0, 10,  6, 12, 25, 10, 14,  2, 50,  9, 13, 14, 40, 13,  8, 6]
+```
+
+- 將 index 第<strong>一</strong>位 1 元素的值直接搬進 Tree
+
+![Fenwick Tree](:Algorithm/FenwickTree_Step001.png)
+
+- 將 index 第<strong>二</strong>位 1 元素的與前 1 個元素相加後放進 Tree
+
+![Fenwick Tree](:Algorithm/FenwickTree_Step002.png)
+
+- 將 index 第<strong>三</strong>位 1 元素的與前 3 個元素相加後放進 Tree
+
+![Fenwick Tree](:Algorithm/FenwickTree_Step003.png)
+
+- 將 index 第<strong>四</strong>位 1 元素的與前 7 個元素相加後放進 Tree
+
+![Fenwick Tree](:Algorithm/FenwickTree_Step004.png)
