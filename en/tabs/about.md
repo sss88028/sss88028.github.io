@@ -63,3 +63,7 @@ Using private time to study the newest programming knowledge.
 - Clean Code
 - Design Pattern
 - TDD
+
+### Work experience
+
+For the **full résumé-style history** with company and project details, see **[Experience]({{ '/en/tabs/experience.html' | relative_url }})**.

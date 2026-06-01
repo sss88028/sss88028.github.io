@@ -151,6 +151,11 @@ about:
   button_name: 關於我
   email_title: email
 
+# for experience layout (full work history)
+experience:
+  title: 工作經歷
+  button_name: 工作經歷
+
 # for links layout
 links:
   title: Links
