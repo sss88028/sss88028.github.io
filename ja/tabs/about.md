@@ -68,3 +68,7 @@ img: ":Profile.JPG"
 - Clean Code
 - Design Pattern
 - TDD
+
+### 職務経歴
+
+企業・プロジェクトの詳細は **[職務経歴（フル版）]({{ '/ja/tabs/experience.html' | relative_url }})** をご覧ください。

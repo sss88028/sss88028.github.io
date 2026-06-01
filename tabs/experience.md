@@ -1,8 +1,15 @@
-> **備註**：網站上的正式繁中完整版為 [`tabs/experience.md`](../tabs/experience.md)（GitHub Pages 的「工作經歷」分頁）。本檔與該頁內容同步，方便離線備份或撰寫履歷時摘錄；**編輯建議以 `tabs/experience.md` 為主**後再將段落貼回此處（若仍需要本檔）。
+---
+layout: experience
+lng_pair: id_experience
+
+title: 工作經歷
+img: ":Profile.JPG"
+meta_description: "Jack Tu 完整工作經歷：庫力索法、奇幻城堡、XRSpace、競峰國際、磁力線上。"
+---
 
 # 工作經歷
 
-精簡版自我介紹與技能請見 [關於我](../tabs/about.md)。
+精簡版自我介紹與技能請見 [關於我]({{ '/tabs/about.html' | relative_url }})。
 
 ---
 

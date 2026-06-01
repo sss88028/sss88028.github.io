@@ -151,6 +151,11 @@ about:
   button_name: 私について
   email_title: メール
 
+# for experience layout (full work history)
+experience:
+  title: 職務経歴
+  button_name: 職務経歴
+
 # for links layout
 links:
   title: リンク

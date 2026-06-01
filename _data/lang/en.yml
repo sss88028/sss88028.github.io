@@ -151,6 +151,11 @@ about:
   button_name: About
   email_title: email
 
+# for experience layout (full work history)
+experience:
+  title: Work Experience
+  button_name: Experience
+
 # for links layout
 links:
   title: Links

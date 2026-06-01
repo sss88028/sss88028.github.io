@@ -71,3 +71,7 @@ img: ":Profile.JPG"
 - Clean Code
 - Design Pattern
 - TDD
+
+### 工作經歷
+
+更完整的公司與專案細節請見 **[工作經歷（完整版）]({{ '/tabs/experience.html' | relative_url }})**。
