@@ -32,15 +32,15 @@ meta_description: "Jack Tu 完整工作經歷：庫力索法、奇幻城堡、XR
 #### 1. 核心系統優化與穩定性維護
 
 - **架構重構與 Clean Code**：針對維護多年的 V2K 系統進行模組化重構，導入設計模式 (Design Patterns)，提升程式碼可讀性與可維護性。
-- **UPH (Units Per Hour) 效能最佳化**：為追求每小時產能 (UPH)，確保軟體在工廠 24 小時連續運作下仍維持高度穩定性與低延遲。
+- **UPH (Units Per Hour) 效能最佳化**：為追求極致的每小時產能 (UPH)，優化耗時邏輯與系統響應速度，確保軟體在工廠 24 小時連續運作下仍維持高度穩定性與低延遲。
 
 #### 2. AI 演算法整合與功能開發
 
-負責將內部演算法團隊研發的 AI／影像辨識核心整合至 V2K，並設計使用者互動流程 (Workflow & UI)：
+負責將內部演算法團隊研發的 AI／影像辨識核心整合至 V2K，並設計流暢的使用者互動流程 (Workflow & UI)：
 
 - **Auto Parameter Tuning (APT)**  
   - **痛點**：傳統上設備工程師 (FAE) 需憑經驗手動耗費數小時調整點膠參數。  
-  - **作法**：開發 APT 模組，引導軟體自動蒐集機台物理參數與點膠結果，並與後端 AI 演算法串接分析，實現「一鍵自動最佳化參數」，大幅縮短 FAE 導入時間；此功能已成為 V2K 的核心競爭力之一。
+  - **作法**：開發 APT 模組，引導軟體自動蒐集機台物理參數與點膠結果，並與後端 AI 演算法串接分析，實現「一鍵自動最佳化參數」，大幅縮短 FAE 導入時間。
 
 - **Underfill AI Wizard**  
   - **痛點**：Underfill 製程依賴膠水流動特性，等待時間不精準會嚴重影響 UPH。  
@@ -61,23 +61,26 @@ meta_description: "Jack Tu 完整工作經歷：庫力索法、奇幻城堡、XR
 
 ### 工作內容與核心成就
 
-- **核心 UI 架構設計 (Core UI Framework)**  
-  主導建立基於 **MVC**、可測試、事件驅動的 UI 系統，提升團隊在 Unity 中的 UI 開發效率與整合速度。
+- **核心 UI 架構設計與軟美術解耦 (MVC Architecture Refactoring)**  
+  - **解決痛點**：解決原系統 UI 與遊戲邏輯高度耦合（Tight Coupling）導致修改 UI 易引發 Bug 的問題。
+  - **具體實作**：主導重構並建立基於 **MVC**、事件驅動的 UI 系統。將資料狀態（Model）獨立管理，並透過 Event/UniRx 自動通知 UI 更新；同時設計抽象 Base Class，讓美術設計師能在 Editor 直接進行 UI 綁定與調整而無須碰觸底層邏輯。
+  - **成果**：實現程式與美術團隊的「完全解耦與並行開發 (Parallel Workflow)」，顯著提升專案整合效率。
 
-- **CI/CD 自動化 (Jenkins)**  
-  導入 Jenkins 自動化建置並持續追蹤外掛與 Google 應用規範；將人工包版由 **40 分鐘以上壓縮至 20 分鐘內**，並落實每日自動執行以加速迭代。
+- **自動化測試與品質保證 (TDD & Unit Testing)**  
+  - 將系統邏輯與 UI 徹底解耦後，成功在團隊中導入單元測試（Unit Testing）與測試驅動開發 (TDD) 流程，實現 Bug 的早期防禦與自動化驗證，大幅提升產出穩定性。
 
-- **效能優化與多執行緒**  
-  針對多款手機裝置優化效能；導入 **Multi-threading** 與非同步處理，使低階裝置仍能穩定維持 **30 FPS**；並協助團隊善用 C# `async/await`。
+- **Shader 渲染與低階機台效能優化 (Noise Shader & Low-end Optimization)**  
+  - **技術突破**：為呈現高質感水面浪花特效，針對高耗能的 Noise（雜訊）演算進行深度研究與多組演算法 Prototype 測試（試行錯誤）。
+  - **成果**：成功在畫面視覺效果與硬體負載之間達成完美平衡，確保遊戲在**最低規格目標測試機（Low-end Target Device）**上依然能穩定維持 **30 FPS** 順暢運行。
 
-- **Shader 視覺特效**  
-  以 Shader 製作畫面特效並優化舊有 Shader，降低硬體負載以兼顧低端裝置流暢度。
+- **CI/CD 自動化建置 (Jenkins Integration)**  
+  - 導入 Jenkins 自動化建置並持續追蹤外掛與 Google 應用最新規範；將人工包版時間由 **40 分鐘以上壓縮至 20 分鐘以內**，並落實每日自動執行以加速產品迭代。
 
-- **測試驅動開發 (TDD)**  
-  在團隊中導入測試流程，提升產出穩定性。
+- **多執行緒與效能調校 (Multi-Threading & Async)**  
+  - 針對多款手機裝置進行系統效能優化，導入 Multi-threading 異步處理耗時邏輯；指導團隊善用 C# `async/await` 語法，降低主執行緒負擔。
 
-- **後端 Web API 與資料庫**  
-  設計與實作 Server／Client 通訊 API，負責伺服器端與資料庫結構設計與管理；新增 **CRUD 風格 Web API**，便於後續擴充。
+- **後端 Web API 與資料庫架構 (Server-Client API & DB)**  
+  - 設計與實作 Server／Client 通訊 API，負責伺服器端邏輯與資料庫結構 (Database Schemas) 設計與管理；建立 **CRUD 風格 Web API**，便於後續擴充與營運維護。
 
 ---
 
@@ -92,9 +95,7 @@ meta_description: "Jack Tu 完整工作經歷：庫力索法、奇幻城堡、XR
 ### 工作內容與核心成就
 
 - **核心系統介面**：設計與實作 VR 裝置系統級功能（如電源、音量等）；以 Unity 渲染 3D UI 並疊加整合至透明 Android 應用，提供沉浸式體驗。
-
 - **3D 虛擬鍵盤**：透過 Android `InputMethodService` 在 VR 環境中實作 3D 虛擬鍵盤與文字輸入。
-
 - **投影顯示優化**：擷取 Unity 渲染結果，將雙眼 VR 畫面轉為 **單一視角 (Single-view)** 輸出至投影裝置，提升非 VR 觀眾的觀看體驗與清晰度。
 
 ---

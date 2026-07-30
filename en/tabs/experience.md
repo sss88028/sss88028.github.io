@@ -32,15 +32,15 @@ Member of the software R&D team, developing and maintaining **V2K**, the core co
 #### 1. Core system optimization and stability
 
 - **Refactoring & clean code**: Modularized long-lived V2K components, applied **design patterns**, and improved readability and maintainability.
-- **UPH (units per hour)**: Optimized throughput so the software stays stable and low-latency under **24/7 factory** operation.
+- **UPH (Units Per Hour)**: Pursued maximum throughput by optimizing time-consuming logic and system response time, keeping the software highly stable and low-latency under **24/7 factory** operation.
 
 #### 2. AI integration and product features
 
-Integrated in-house **AI / computer vision** into V2K and owned workflow and UI design:
+Integrated in-house **AI / computer vision** into V2K and designed smooth user workflows (workflow & UI):
 
 - **Auto Parameter Tuning (APT)**  
-  - **Problem**: Field engineers (FAEs) often spent hours manually tuning dispensing parameters.  
-  - **Solution**: Built the APT module to collect machine physics and dispensing results, call backend AI analysis, and deliver **one-click parameter optimization**, shortening FAE bring-up time. APT is a key differentiator for V2K.
+  - **Problem**: Field engineers (FAEs) often spent hours manually tuning dispensing parameters based on experience.  
+  - **Solution**: Built the APT module to collect machine physics and dispensing results, call backend AI analysis, and deliver **one-click parameter optimization**, significantly shortening FAE bring-up time.
 
 - **Underfill AI Wizard**  
   - **Problem**: Underfill depends on fluid flow; imprecise wait times hurt UPH.  
@@ -59,14 +59,28 @@ Integrated in-house **AI / computer vision** into V2K and owned workflow and UI 
 - **Products**: Mobile card / management games (*BigWar / Richman Fight*)
 - **Tech**: Unity, C#, MySQL, Photon Server, Entity Framework
 
-### Highlights
+### Role and key achievements
 
-- **Core UI framework**: Led an **MVC-based**, testable, event-driven UI system for faster Unity UI work and integration.
-- **CI/CD (Jenkins)**: Automated builds and kept up with Google Play requirements; cut packaging from **over 40 minutes to under 20** with daily runs.
-- **Performance & threading**: Device tuning; **multi-threading** and async patterns to hold **30 FPS** on low-end hardware; promoted C# `async/await` in the team.
-- **Shaders**: Authored effects and refactored legacy shaders to reduce GPU load.
-- **TDD**: Introduced testing practices to improve release quality.
-- **Backend & data**: Designed client–server APIs and DB schemas; added **CRUD-style Web APIs** for extensibility.
+- **Core UI architecture & art decoupling (MVC architecture refactoring)**  
+  - **Problem solved**: UI and game logic were tightly coupled, so UI changes often introduced bugs.  
+  - **Implementation**: Led a refactor to an **MVC**, event-driven UI system. State lived in independent models with Event/UniRx driving UI updates; designed abstract base classes so artists could bind and tune UI in the Editor without touching core logic.  
+  - **Outcome**: Enabled **fully decoupled, parallel workflows** between engineering and art, significantly improving integration speed.
+
+- **Automated testing & quality assurance (TDD & unit testing)**  
+  - After decoupling system logic from UI, introduced **unit testing** and **test-driven development (TDD)** so bugs were caught early through automated verification, greatly improving release stability.
+
+- **Shader rendering & low-end performance (noise shader & low-end optimization)**  
+  - **Technical work**: For high-quality water-surface foam, researched and prototyped multiple **noise** algorithms to balance visual quality and cost.  
+  - **Outcome**: Achieved a strong balance between visuals and GPU load, keeping the game at a stable **30 FPS** on the **low-end target test device**.
+
+- **CI/CD automation (Jenkins integration)**  
+  - Introduced Jenkins builds and tracked plugins and Google Play requirements; cut manual packaging from **over 40 minutes to under 20**, with daily automated runs to speed iteration.
+
+- **Multi-threading & performance tuning (multi-threading & async)**  
+  - Optimized performance across many phone models; used **multi-threading** for heavy work off the main thread and coached the team on C# `async/await` to reduce main-thread load.
+
+- **Backend Web API & database architecture (server–client API & DB)**  
+  - Designed client–server APIs and server logic; owned **database schema** design and management; built **CRUD-style Web APIs** for easier extension and live ops.
 
 ---
 
@@ -91,6 +105,7 @@ Integrated in-house **AI / computer vision** into V2K and owned workflow and UI 
 **Mar 2017 – Sep 2019 | Software Engineer, Product Development Team**
 
 - **Tech**: Unity, PostgreSQL, Photon Server, C#, SQL, PHP, C/C++
+
 
 ### Project 1: SuperAcornCup (3v3 party game, Dec 2017 – Dec 2018 launch)
 
